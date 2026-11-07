@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniLocate ULEAM — Objetos Perdidos</title>
+    <!-- Cargamos Bootstrap para dar un estilo profesional rápido -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+</head>
+<body class="bg-light p-4">
+
+<div class="container bg-white p-4 rounded shadow mb-4" style="max-width: 600px;">
+    <h2 class="text-primary mb-3">🔍 UniLocate ULEAM</h2>
+    <p class="text-muted">Reportar un nuevo objeto encontrado en el campus universitario.</p>
+
+    <!-- Formulario de reporte de hallazgos -->
+    <div class="mb-3">
+        <label class="form-label">Nombre del Objeto:</label>
+        <input type="text" id="nombre-objeto" class="form-control" placeholder="Ej. Termo Stanley, Llaves, Credencial">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Categoría:</label>
+        <select id="categoria-objeto" class="form-select">
+            <option value="Electronica">Electrónica (Cargadores, Pendrives)</option>
+            <option value="Documentos">Documentos (Credenciales, Cédulas)</option>
+            <option value="Accesorios">Accesorios (Llaves, Termos, Suéteres)</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Ubicación exacta del Hallazgo:</label>
+        <input type="text" id="ubicacion-objeto" class="form-control" placeholder="Ej. Bloque B — Aula 201">
+    </div>
+
+    <!-- Cargar Foto (Estrategia Cloudinary integrada) -->
+    <div class="mb-3">
+        <label class="form-label">Foto del Objeto:</label>
+        <input type="file" id="foto-objeto" class="form-control" accept="image/*">
+    </div>
+
+    <button id="btnReportar" class="btn btn-primary w-100">Publicar Hallazgo</button>
+</div>
+
+<!-- Contenedor del Catálogo Público -->
+<div class="container bg-white p-4 rounded shadow" style="max-width: 600px;">
+    <h4 class="mb-3">📦 Objetos en Custodia Temporal</h4>
+    <div id="lista-objetos" class="row">
+        <!-- JavaScript llenará esta parte de forma automática -->
+    </div>
+</div>
+
+<!-- LIBRERÍAS DE FIREBASE (Versión clásica oficial de tu guía) -->
+<script src="https://gstatic.com"></script>
+<script src="https://gstatic.com"></script>
+<script src="https://gstatic.com"></script>
+
+<!-- TUS ARCHIVOS LOCALES (Orden de carga obligatorio del docente) -->
+<script src="js/firebase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
